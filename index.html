@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FraudShield AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>🛡 FraudShield AI</h2>
+
+        <button onclick="showTab('dashboard')">📊 Dashboard</button>
+        <button onclick="showTab('detect')">🔍 Detector</button>
+        <button onclick="showTab('logs')">🧾 Logs</button>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- DASHBOARD -->
+        <div id="dashboard" class="tab active">
+            <h1>Analytics Overview</h1>
+
+            <canvas id="chart" width="400"></canvas>
+        </div>
+
+        <!-- DETECTOR -->
+        <div id="detect" class="tab">
+            <h1>AI Scam Detection</h1>
+
+            <textarea id="inputText" placeholder="Enter message..."></textarea>
+
+            <button onclick="predict()">Analyze</button>
+
+            <div id="result"></div>
+
+            <div class="bar">
+                <div id="barFill"></div>
+            </div>
+        </div>
+
+        <!-- LOGS -->
+        <div id="logs" class="tab">
+            <h1>Recent Activity</h1>
+            <div id="logList"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
