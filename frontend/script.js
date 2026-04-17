@@ -1,6 +1,8 @@
 
-const API = "http://127.0.0.1:8000/predict";
-const ANALYTICS = "http://127.0.0.1:8000/analytics";
+const BASE_URL = "https://ai-scam-detector-6kok.onrender.com";
+
+const API = BASE_URL + "https://ai-scam-detector-6kok.onrender.com/analytics/predict";
+const ANALYTICS = BASE_URL + "https://ai-scam-detector-6kok.onrender.com/analytics/analytics";
 
 function showTab(id) {
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
